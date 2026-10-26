@@ -1,4 +1,4 @@
-abstract class AbstractSupportRequest implements SupportRequest {
+public abstract class AbstractSupportRequest implements SupportRequest {
 	private int id;
 	private String title;
 	private int basePoints;

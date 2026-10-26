@@ -1,4 +1,4 @@
-interface SupportRequest {
+public interface SupportRequest {
 	int getId();
 	String getTitle();
 	int getBasePoints();
