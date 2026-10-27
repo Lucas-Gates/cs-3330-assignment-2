@@ -1,10 +1,13 @@
 public abstract class AbstractSupportRequest implements SupportRequest {
+	// Required variables
 	private int id;
 	private String title;
 	private int basePoints;
 	private boolean resolved;
 
+	// Constructor
 	public AbstractSupportRequest(int id, String title, int basePoints, boolean resolved) {
+		// Required validation
 		if (id <= 0) {
 			throw new IllegalArgumentException("ID cannot be less than 1");
 		}
@@ -15,12 +18,14 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 			throw new IllegalArgumentException("Base Poitns cannot be less than 1");
 		}
 		
+		// Assigning values to variables
 		this.id = id;
 		this.title = title;
 		this.basePoints = basePoints;
 		this.resolved = resolved;
 	}
 	
+	// To string method
 	@Override
 	public String toString() {
 		return "Request ID: " + id
@@ -29,6 +34,7 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 				+ ", Resolved:" + resolved;
 	}
 
+	// Getters
 	public int getId() {
 		return id;
 	}
@@ -45,6 +51,7 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 		return resolved;
 	}
 	
+	// Methods to check resolved
 	protected void checkNotResolved() {
 		if(resolved) {
 			throw new IllegalStateException("Request is already resolved");
