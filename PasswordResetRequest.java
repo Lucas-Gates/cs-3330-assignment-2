@@ -30,4 +30,9 @@ public class PasswordResetRequest extends AbstractSupportRequest {
 		technician.addPoints(points);
 		return points;
 	}
+
+	// Getter
+	public String getAccountName() {
+		return accountName;
+	}
 }
