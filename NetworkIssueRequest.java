@@ -3,8 +3,8 @@ public class NetworkIssueRequest extends AbstractSupportRequest {
 
     public NetworkIssueRequest(int id, String title, int basePoints, int affectedUsers) {
         super(id, title, basePoints);
-        if (affectedUsers <= 0) { //can't have negative amount of users (fail fast)
-            throw new IllegalArgumentException("You can't have a negative number of affected users.");
+        if (affectedUsers <= 0) { //can't have negative (or zero) amount of users (fail fast)
+            throw new IllegalArgumentException("You can't have negative or zero affected users.");
         }
         this.affectedUsers = affectedUsers;
     }
@@ -16,6 +16,9 @@ public class NetworkIssueRequest extends AbstractSupportRequest {
 
     @Override
     public int resolveFor(Technician technician) {
+        if (technician == null) {
+            throw new IllegalArgumentException("Technician cannot be null.");
+        }
         if (isResolved()) {
             throw new IllegalStateException("This request is already done.");
         }
