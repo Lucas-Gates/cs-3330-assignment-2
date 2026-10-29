@@ -1,3 +1,21 @@
 .project
 .classpath
 /target/
+
+# eclipse temp build folders
+bin/
+bin.target.classes/
+src.main/
+src.test/
+
+# maven build outputs
+target/
+
+#  compiled class files in the root folder
+*.class
+
+# eclipse specific configuration files
+.classpath
+.project
+.settings/
+.factorypath
