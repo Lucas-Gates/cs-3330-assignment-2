@@ -1,10 +1,5 @@
 /* 
 author: Dilia Berrios
-• Do not expose internal collections directly.
-• Avoid long message chains and knowledge leaks.
-• The help desk should not perform type checking such as if (request instanceof DeviceSetupRequest).
-• Request-specific behavior belongs in the request classes, not in HelpDesk.
-• Keep HelpDesk focused on coordination rather than turning it into a god class.
 */ 
 import java.util.Map;
 import java.util.HashMap;
@@ -73,7 +68,6 @@ public class HelpDesk {
 			}
 			// add request to techs assignments
 			technicianRequests.add(request);
-			
 	}
 	
 	// resolves a request 
