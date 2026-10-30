@@ -1,9 +1,18 @@
 public class Main {
 	public static void main(String[] args) {
 		
-		//create at least 3 technicians, including two technicians with the same name 
+		
+		//creating a help desk
+		HelpDesk helpDesk = new.HelpDesk();
+		
+		
+		//create at least 3 technicians ( 2 with the same name) 
+		Technician dilia = new.Technician("Dilia");
+		Technician jena =  new.Technician("jena");
+		
 		
 		// create at least 6 support requests, 2 of each required type 
+		SupportRequest
 		
 		
 		// add requests to help desk 
