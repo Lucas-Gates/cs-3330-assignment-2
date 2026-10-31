@@ -2,3 +2,6 @@
 Object-Oriented Programming - Assignment 2 
 
 Group Six: Lucas Gates, Dilia Berrios, Cody Kaughman
+
+
+we all used eclipse ide.
