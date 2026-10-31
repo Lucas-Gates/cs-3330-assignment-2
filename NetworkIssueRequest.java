@@ -1,8 +1,8 @@
 public class NetworkIssueRequest extends AbstractSupportRequest {
     private final int affectedUsers;
 
-    public NetworkIssueRequest(int id, String title, int basePoints, int affectedUsers) {
-        super(id, title, basePoints);
+    public NetworkIssueRequest(int id, String title, int basePoints, int affectedUsers, boolean resolved) {
+        super(id, title, basePoints, resolved);
         if (affectedUsers <= 0) { //can't have negative (or zero) amount of users (fail fast)
             throw new IllegalArgumentException("You can't have negative or zero affected users.");
         }
@@ -25,7 +25,7 @@ public class NetworkIssueRequest extends AbstractSupportRequest {
 
         //decided to use the weighted rule: basePoints + (affectedUsers * 2)
         int pointsAwarded = getBasePoints() + (affectedUsers * 2);
-        setResolved(true);
+        markResolved(true);
         technician.addPoints(pointsAwarded);
         return pointsAwarded;
     }

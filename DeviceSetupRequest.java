@@ -1,8 +1,8 @@
 public class DeviceSetupRequest extends AbstractSupportRequest {
     private final int deviceCount;
 
-    public DeviceSetupRequest(int id, String title, int basePoints, int deviceCount) {
-        super(id, title, basePoints);
+    public DeviceSetupRequest(int id, String title, int basePoints, int deviceCount, boolean resolved) {
+        super(id, title, basePoints, resolved);
 
         if (deviceCount <= 0) { //can't have non positive devices (fail fast)
             throw new IllegalArgumentException("You can't have negative or zero devices.");
@@ -25,7 +25,7 @@ public class DeviceSetupRequest extends AbstractSupportRequest {
         }
         //awarded service points = basePoints * deviceCount
         int pointsAwarded = getBasePoints() * this.deviceCount;
-        setResolved(true);
+        markResolved(true);
         technician.addPoints(pointsAwarded);
         return pointsAwarded;
     }
