@@ -22,13 +22,13 @@ public class Main {
 		
 		
 		// create at least 6 support requests, 2 of each required type ( network, password, devicesetup)
-		// NetworkIssueRequest(int id, String title, int basePoints, int affectedUsers)
-		SupportRequest request1 = new NetworkIssueRequest(1, "Network issue 1" , 5 , 25);
-		SupportRequest request2 = new NetworkIssueRequest(2, "Network issue 2" , 5 , 30);
+		// NetworkIssueRequest(int id, String title, int basePoints, int affectedUsers, boolean resolved) 
+		SupportRequest request1 = new NetworkIssueRequest(1, "Network issue 1" , 5 , 25, false);
+		SupportRequest request2 = new NetworkIssueRequest(2, "Network issue 2" , 5 , 30, false);
 				
-		//DeviceSetupRequest(int id, String title, int basePoints, int deviceCount)
-		SupportRequest request3 = new DeviceSetupRequest(3, "Device setup request 1" , 10, 15);
-		SupportRequest request4 = new DeviceSetupRequest(4, "Device setup request 2" , 10, 10);
+		//DeviceSetupRequest(int id, String title, int basePoints, int deviceCount, boolean resolved)
+		SupportRequest request3 = new DeviceSetupRequest(3, "Device setup request 1" , 10, 15, false);
+		SupportRequest request4 = new DeviceSetupRequest(4, "Device setup request 2" , 10, 10, false);
 		
 		//PasswordResetRequest(int id, String title, int basePoints, boolean resolved, String accountName)
 		SupportRequest request5 = new PasswordResetRequest(5, "Password reset request 1", 5, true, "fabborris");
