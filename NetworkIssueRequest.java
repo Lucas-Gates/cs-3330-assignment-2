@@ -25,7 +25,7 @@ public class NetworkIssueRequest extends AbstractSupportRequest {
 
         //decided to use the weighted rule: basePoints + (affectedUsers * 2)
         int pointsAwarded = getBasePoints() + (affectedUsers * 2);
-        markResolved(true);
+        markResolved();
         technician.addPoints(pointsAwarded);
         return pointsAwarded;
     }

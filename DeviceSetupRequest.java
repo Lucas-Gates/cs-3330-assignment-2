@@ -25,7 +25,7 @@ public class DeviceSetupRequest extends AbstractSupportRequest {
         }
         //awarded service points = basePoints * deviceCount
         int pointsAwarded = getBasePoints() * this.deviceCount;
-        markResolved(true);
+        markResolved();
         technician.addPoints(pointsAwarded);
         return pointsAwarded;
     }
