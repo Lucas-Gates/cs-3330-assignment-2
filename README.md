@@ -5,4 +5,6 @@ Group Six: Lucas Gates, Dilia Berrios, Cody Kaughman
 
 
 we all used eclipse ide.
+
+Below is a screenshot of the output, as we were not able to upload a picture of the screenshot elsewhere
 <img width="917" height="474" alt="Screenshot 2026-10-30 at 9 10 26 PM" src="https://github.com/user-attachments/assets/b9f25d40-9bb5-45dd-852a-622f150ac9ed" />
