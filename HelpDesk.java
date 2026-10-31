@@ -92,13 +92,15 @@ public class HelpDesk {
 		//calls request once ID has been found/not null 
 		if (targetReq != null) {
 			//remove the targetReq from the technicians reports, return the int of points they have
+			int points = targetReq.resolveFor(technician);
+			// add points to techs score
+			technician.addPoints(points);
+			//remove assignment
 			technicianRequests.remove(targetReq);
-			// note to self find what points is called !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-			int points = 0;
+			
 			return points;
 		}
 		return 0;
-		
 
 	}
 
@@ -130,9 +132,14 @@ public class HelpDesk {
 			return;
 		}
 		for (SupportRequest req : r) {
-			System.out.println(r);
+			System.out.println(req);
 		}
 		
+	}
+	
+	//getter for get all requests (will be used in main)
+	public List<SupportRequest> getAllReqs() {
+	    return new ArrayList<SupportRequest>(requestsById.values());
 	}
 
 } 
