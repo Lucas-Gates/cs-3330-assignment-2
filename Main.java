@@ -84,8 +84,7 @@ public class Main {
 		//failfast req, thowing an exception
 		System.out.println("failfast requirement");
 		//reset duplicate request IDs by throwing exception 
-		helpDesk.addRequest(new NetworkIssueRequest(1, "duplicate issue 1" , 5 , 25));
-		}
+		helpDesk.addRequest(new NetworkIssueRequest(1, "duplicate issue 1" , 5 , 25, false));
 		
 		
 	}
